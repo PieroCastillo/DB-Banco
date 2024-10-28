@@ -92,5 +92,5 @@ create table
     id_cuenta_dst int not null,
     monto decimal(512, 2),
     fecha datetime
-  ) -- add data int not nullo all tables
+  ) -- add data int not null all tables
   -- add queries
