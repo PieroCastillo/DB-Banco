@@ -1,96 +1,119 @@
--- Create a new database called 'BancoDB'
--- TODO: impl authentication
-CREATE
-or REPLACE DATABASE BancoDB -- crear tablas de administrativa
+Comandos en postgres sql
 
-create table
-  Cargo(id_cargo int not null primary key, nombre varchar(20), sueldo_base int not null)
-create table
-  Area(id_area int not null primary key, nombre_area varchar(20)) 
-  
-create table
-  Empleado(
-    id_empleado int not null primary key,
-    id_cargo int not null,
-    id_area int not null,
-    nombres varchar(20),
-    apellidos varchar(20),
-    salario_extra int not null,
-    fecha_contratacion date,
-    numero varchar(9),
-    correo_corporativo varchar(20),
-    constraint fk_cargo foreign key (id_cargo)
-    references Cargo(id_cargo),
-    constraint fk_area foreign key (id_area)
-    references Area(id_area)
-  )
--- crear tablas de cliente
-create table
-  Cliente(
-    id_cliente int not null primary key,
-    nombres varchar(20),
-    apellidos varchar(20),
-    sexo char,
-    numero_telefonico varchar(9),
-    correo_principal varchar(20),
-    correo_respaldo varchar(20),
-    dni_ruc int not null,
-    tipo char
-  )
-create table
-  Prestamo(
-    id_prestamo int not null primary key,
-    id_cliente int not null,
-    monto decimal(512, 2),
-    tasa_int not nulleres real
-  )
-create table
-  TarjetaCredito(
-    id_tarjeta_credito int not null primary key,
-    id_cliente int not null,
-    fecha_vencimiento date,
-    numero_tarjeta int not null,
-    clave int not null,
-    pago_minimo decimal(512, 2),
-    limite_credito decimal(512, 2),
-    fecha_cierre date
-  )
-create table
-  CuentaBancaria(
-    id_cuenta int not null primary key,
-    id_cliente int not null,
-    balance_cuenta decimal(512, 2)
-  )
-create table
-  TarjetaDebito(
-    id_tarjeta_debito int not null primary key,
-    id_cliente int not null,
-    id_cuenta int not null,
-    fecha_vencimiento date,
-    numero_tarjeta int not null,
-    clave varchar(4),
-    tipo_suscripcion char
-  )
-create table
-  Inversion(
-    id_inversion int not null primary key,
-    id_cuenta int not null,
-    monto decimal(512, 2),
-    int not nulleres real
-  )
-create table
-  Transaccion(
-    id_transaccion int not null primary key,
-    id_cuenta int not null,
-    monto decimal(512, 2),
-    fecha datetime
-  )
-create table
-  Transferencia(
-    id_transferencia int not null primary key,
-    id_cuenta_src int not null,
-    id_cuenta_dst int not null,
-    monto decimal(512, 2),
-    fecha datetime
-  ) -- add data int not null all tables
-  -- add queries
+C:\Users\HP>cd\
+
+C:\> cd C:\Program Files\PostgreSQL\17\bin
+
+C:\Program Files\PostgreSQL\17\bin>psql -U postgres -d template1
+Contraseña para usuario postgres:
+psql (17.0, servidor 14.13)
+ADVERTENCIA: El código de página de la consola (850) difiere del código
+            de página de Windows (1252).
+            Los caracteres de 8 bits pueden funcionar incorrectamente.
+            Vea la página de referencia de psql «Notes for Windows users»
+            para obtener más detalles.
+Digite «help» para obtener ayuda.
+
+template1=# CREATE DATABASE bancodb;
+CREATE DATABASE
+
+template1=# \c bancodb
+psql (17.0, servidor 14.13)
+Ahora está conectado a la base de datos «bancodb» con el usuario «postgres».
+
+bancodb=# create table
+bancodb-#   Cargo(id_cargo int not null primary key, nombre varchar(20), sueldo_base int not null);
+CREATE TABLE
+bancodb=# create table
+bancodb-#   Area(id_area int not null primary key, nombre_area varchar(20));
+CREATE TABLE
+bancodb=# create table
+bancodb-#   Empleado(
+bancodb(#     id_empleado int not null primary key,
+bancodb(#     id_cargo int not null,
+bancodb(#     id_area int not null,
+bancodb(#     nombres varchar(20),
+bancodb(#     apellidos varchar(20),
+bancodb(#     salario_extra int not null,
+bancodb(#     fecha_contratacion date,
+bancodb(#     numero varchar(9),
+bancodb(#     correo_corporativo varchar(20),
+bancodb(#     constraint fk_cargo foreign key (id_cargo)
+bancodb(#     references Cargo(id_cargo),
+bancodb(#     constraint fk_area foreign key (id_area)
+bancodb(#     references Area(id_area)
+bancodb(#   );
+CREATE TABLE
+bancodb=# create table
+bancodb-#   Cliente(
+bancodb(#     id_cliente int not null primary key,
+bancodb(#     nombres varchar(20),
+bancodb(#     apellidos varchar(20),
+bancodb(#     sexo char,
+bancodb(#     numero_telefonico varchar(9),
+bancodb(#     correo_principal varchar(20),
+bancodb(#     correo_respaldo varchar(20),
+bancodb(#     dni_ruc int not null,
+bancodb(#     tipo char
+bancodb(#   );
+CREATE TABLE
+
+bancodb=# CREATE TABLE Prestamo (
+bancodb(#     id_prestamo INT NOT NULL PRIMARY KEY,
+bancodb(#     id_cliente INT NOT NULL,
+bancodb(#     monto DECIMAL(12, 2),  -- Cambié el tamaño de decimal a un rango más común
+bancodb(#     tasa REAL NOT NULL
+bancodb(# );
+CREATE TABLE
+bancodb=# create table
+bancodb-#   TarjetaCredito(
+bancodb(#     id_tarjeta_credito int not null primary key,
+bancodb(#     id_cliente int not null,
+bancodb(#     fecha_vencimiento date,
+bancodb(#     numero_tarjeta int not null,
+bancodb(#     clave int not null,
+bancodb(#     pago_minimo decimal(512, 2),
+bancodb(#     limite_credito decimal(512, 2),
+bancodb(#     fecha_cierre date
+bancodb(#   );
+CREATE TABLE
+
+bancodb=# CREATE TABLE CuentaBancaria (
+bancodb(#     id_cuenta INT NOT NULL PRIMARY KEY,
+bancodb(#     id_cliente INT NOT NULL,
+bancodb(#     balance_cuenta DECIMAL(512, 2)
+bancodb(# );
+CREATE TABLE
+bancodb=# CREATE TABLE TarjetaDebito (
+bancodb(#     id_tarjeta_debito INT NOT NULL PRIMARY KEY,
+bancodb(#     id_cliente INT NOT NULL,
+bancodb(#     id_cuenta INT NOT NULL,
+bancodb(#     fecha_vencimiento DATE,
+bancodb(#     numero_tarjeta BIGINT NOT NULL,
+bancodb(#     clave VARCHAR(4),
+bancodb(#     tipo_suscripcion CHAR(1)
+bancodb(# );
+CREATE TABLE
+bancodb=# CREATE TABLE Inversion (
+bancodb(#     id_inversion INT NOT NULL PRIMARY KEY,
+bancodb(#     id_cuenta INT NOT NULL,
+bancodb(#     monto DECIMAL(12, 2),
+bancodb(#     interes REAL NOT NULL
+bancodb(# );
+
+CREATE TABLE
+bancodb=# CREATE TABLE Transaccion (
+bancodb(#     id_transaccion INT NOT NULL PRIMARY KEY,
+bancodb(#     id_cuenta INT NOT NULL,
+bancodb(#     monto DECIMAL(12, 2),
+bancodb(#     fecha TIMESTAMP
+bancodb(# );
+CREATE TABLE
+bancodb=# CREATE TABLE Transferencia (
+bancodb(#     id_transferencia INT NOT NULL PRIMARY KEY,
+bancodb(#     id_cuenta_src INT NOT NULL,
+bancodb(#     id_cuenta_dst INT NOT NULL,
+bancodb(#     monto DECIMAL(12, 2),
+bancodb(#     fecha TIMESTAMP
+bancodb(# );
+CREATE TABLE
