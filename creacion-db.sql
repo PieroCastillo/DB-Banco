@@ -23,20 +23,17 @@ psql (17.0, servidor 14.13)
 Ahora está conectado a la base de datos «bancodb» con el usuario «postgres».
 
             
-create table
-Cargo(id_cargo int not null primary key, nombre varchar(20), sueldo_base int not null);
+create table Cargo(id_cargo int not null primary key, nombre varchar(20), sueldo_base int not null);
 
 CREATE TABLE
 
             
-create table
- Area(id_area int not null primary key, nombre_area varchar(20));
+create table Area(id_area int not null primary key, nombre_area varchar(20));
 
 CREATE TABLE
 
             
-create table
- Empleado(
+create table Empleado(
 id_empleado int not null primary key,
  id_cargo int not null,
  id_area int not null,
@@ -55,8 +52,7 @@ references Area(id_area)
 CREATE TABLE
 
             
-create table
-Cliente(
+create table Cliente(
 id_cliente int not null primary key,
 nombres varchar(20),
 apellidos varchar(20),
@@ -81,8 +77,7 @@ tasa REAL NOT NULL
 CREATE TABLE
 
             
-create table
-TarjetaCredito(
+create table TarjetaCredito(
 id_tarjeta_credito int not null primary key,
 id_cliente int not null,
 fecha_vencimiento date,
