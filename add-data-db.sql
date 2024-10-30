@@ -1,4 +1,4 @@
-Agregando datos a mi tabla
+--Agregando datos a mi tabla
 
 INSERT INTO Area (id_area, nombre_area) VALUES
 (1, 'Recursos Humanos'),

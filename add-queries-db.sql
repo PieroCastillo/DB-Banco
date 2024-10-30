@@ -1,6 +1,4 @@
-Haciendo consultas
-
-#
+-- Haciendo consultas#
 
 SELECT nombre, sueldo_base
 FROM Cargo
