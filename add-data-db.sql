@@ -197,7 +197,7 @@ INSERT INTO TarjetaCredito (id_tarjeta_credito, id_cliente, fecha_vencimiento, n
 (19, 119, '2028-06-30', 1112345678901234, 1112, 175.00, 9500.00, '2024-11-12'),
 (20, 120, '2029-05-15', 2223456789012345, 2223, 200.00, 10000.00, '2024-11-13');
 
-ERROR:  entero fuera de rango
+--ERROR:  entero fuera de rango
   
 ALTER TABLE TarjetaCredito
   
@@ -336,6 +336,3 @@ INSERT INTO Transferencia (id_transferencia, id_cuenta_src, id_cuenta_dst, monto
 (18, 416, 417, 300.00, '2023-10-18 17:40:45'),
 (19, 418, 419, 250.50, '2023-10-19 18:50:55'),
 (20, 420, 401, 700.00, '2023-10-20 09:00:15');
-
-INSERT 0 20
-
