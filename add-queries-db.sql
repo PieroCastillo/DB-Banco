@@ -23,7 +23,7 @@ SELECT * FROM Cliente WHERE sexo = 'F' OR dni_ruc < 50000000LIMIT 10;
 SELECT * FROM Cliente WHERE (apellidos = 'Lopez' OR apellidos = 'Sanchez') AND correo_principal LIKE '%@cor.com'LIMIT 3;
 
 
-SELECT * FROM Prestamo WHERE id_cliente IN (101, 105, 110, 115);
+SELECT * FROM Prestamo WHERE id_cliente IN (1, 5, 10, 15);
 
 
 SELECT * FROM Prestamo WHERE monto BETWEEN 5000.00 AND 15000.00;
@@ -52,7 +52,7 @@ SELECT * FROM TarjetaDebito LIMIT 5;
 
 SELECT id_tarjeta_debito, id_cliente, tipo_suscripcion FROM TarjetaDebito WHERE tipo_suscripcion = 'A'LIMIT 3;
 
-SELECT id_transaccion, id_cuenta, monto, fecha FROM Transaccion WHERE id_cuenta IN (401, 403, 405, 407, 409);
+SELECT id_transaccion, id_cuenta, monto, fecha FROM Transaccion WHERE id_cuenta IN (1, 3, 5, 7, 9);
 
 
 SELECT id_transaccion, id_cuenta, monto, fecha FROM Transaccion WHERE monto BETWEEN 200 AND 800;
