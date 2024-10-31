@@ -10,7 +10,7 @@
 --             Vea la página de referencia de psql «Notes for Windows users»
 --             para obtener más detalles.
 -- Digite «help» para obtener ayuda.
-CREATE DATABASE bancodb;
+--CREATE DATABASE bancodb;
 
 
 --template1=# \c bancodb
