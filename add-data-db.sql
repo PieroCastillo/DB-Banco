@@ -1,35 +1,4 @@
 --Agregando datos a mi tabla
-
-INSERT INTO Area (id_area, nombre_area) VALUES
-(1, 'Recursos Humanos'),
-(2, 'Contabilidad'),
-(3, 'Marketing'),
-(4, 'Ventas'),
-(5, 'Producción'),
-(6, 'Logística'),
-(7, 'IT'),
-(8, 'Investigación y Desarrollo'),
-(9, 'Atención al Cliente'),
-(10, 'Compras'),
-(11, 'Calidad'),
-(12, 'Legal'),
-(13, 'Finanzas'),
-(14, 'Planificación'),
-(15, 'Comunicaciones'),
-(16, 'Mantenimiento'),
-(17, 'Operaciones'),
-(18, 'Gestión de Proyectos'),
-(19, 'Relaciones Públicas'),
-(20, 'Auditoría');
-
-ERROR:  el valor es demasiado largo para el tipo character varying(20)
-
-ALTER TABLE Area
-  
-ALTER COLUMN nombre_area TYPE VARCHAR(30);
-
-ALTER TABLE
-
   
 INSERT INTO Area (id_area, nombre_area) VALUES
 (1, 'Recursos Humanos'),
@@ -52,9 +21,6 @@ INSERT INTO Area (id_area, nombre_area) VALUES
 (18, 'Gestión de Proyectos'),
 (19, 'Relaciones Públicas'),
 (20, 'Auditoría');
-
-INSERT 0 20
-
 
 INSERT INTO Cargo (id_cargo, nombre, sueldo_base) VALUES
 (1, 'Gerente', 5000),
@@ -78,8 +44,6 @@ INSERT INTO Cargo (id_cargo, nombre, sueldo_base) VALUES
 (19, 'Marketing', 3500),
 (20, 'Recursos Humanos', 3700);
 
-INSERT 0 20
-
   
 INSERT INTO Empleado (id_empleado, id_cargo, id_area, nombres, apellidos, salario_extra, fecha_contratacion, numero, correo_corporativo) VALUES
 (1, 1, 1, 'Carlos', 'Gómez', 500, '2020-01-15', '987654321', 'cgomez@empresa.com'),
@@ -103,40 +67,7 @@ INSERT INTO Empleado (id_empleado, id_cargo, id_area, nombres, apellidos, salari
 (19, 19, 19, 'Sofía', 'Pacheco', 300, '2018-02-28', '987654339', 'spacheco@empresa.com'),
 (20, 20, 20, 'Oscar', 'Vargas', 400, '2020-12-16', '923404127','ovargas@empresa.com');
 
-ERROR:  el valor es demasiado largo para el tipo character varying(20)
-  
-ALTER TABLE Empleado
-  
-ALTER COLUMN nombres TYPE VARCHAR(30),
-ALTER COLUMN apellidos TYPE VARCHAR(30),
-ALTER COLUMN correo_corporativo TYPE VARCHAR(30);
 
-ALTER TABLE
-
-  
-INSERT INTO Empleado (id_empleado, id_cargo, id_area, nombres, apellidos, salario_extra, fecha_contratacion, numero, correo_corporativo) VALUES
-(1, 1, 1, 'Carlos', 'Gómez', 500, '2020-01-15', '987654321', 'cgomez@empresa.com'),
-(2, 2, 2, 'Ana', 'López', 400, '2019-06-01', '987654322', 'alopez@empresa.com'),
-(3, 3, 3, 'Luis', 'Ramírez', 300, '2021-08-21', '987654323', 'lramirez@empresa.com'),
-(4, 4, 4, 'María', 'Pérez', 200, '2018-11-10', '987654324', 'mperez@empresa.com'),
-(5, 5, 5, 'Jorge', 'Sánchez', 250, '2017-05-22', '987654325', 'jsanchez@empresa.com'),
-(6, 6, 6, 'Elena', 'Jiménez', 350, '2019-09-13', '987654326', 'ejimenez@empresa.com'),
-(7, 7, 7, 'Diego', 'Torres', 150, '2022-01-08', '987654327', 'dtorres@empresa.com'),
-(8, 8, 8, 'Paula', 'Rojas', 300, '2018-03-17', '987654328', 'projas@empresa.com'),
-(9, 9, 9, 'José', 'Flores', 450, '2020-10-25', '987654329', 'jflores@empresa.com'),
-(10, 10, 10, 'Lucía', 'Martínez', 250, '2021-07-04', '987654330', 'lmartinez@empresa.com'),
-(11, 11, 11, 'Pedro', 'García', 500, '2022-02-18', '987654331', 'pgarcia@empresa.com'),
-(12, 12, 12, 'Camila', 'Castro', 300, '2018-12-11', '987654332', 'ccastro@empresa.com'),
-(13, 13, 13, 'Rafael', 'Suárez', 200, '2017-08-29', '987654333', 'rsuarez@empresa.com'),
-(14, 14, 14, 'Mónica', 'Herrera', 150, '2019-04-15', '987654334', 'mherrera@empresa.com'),
-(15, 15, 15, 'Andrés', 'Mendoza', 400, '2020-06-20', '987654335', 'amendoza@empresa.com'),
-(16, 16, 16, 'Laura', 'Ortiz', 250, '2021-09-27', '987654336', 'lortiz@empresa.com'),
-(17, 17, 17, 'Felipe', 'Navarro', 350, '2019-05-12', '987654337', 'fnavarro@empresa.com'),
-(18, 18, 18, 'Gabriela', 'Reyes', 150, '2022-03-03', '987654338', 'greyes@empresa.com'),
-(19, 19, 19, 'Sofía', 'Pacheco', 300, '2018-02-28', '987654339', 'spacheco@empresa.com'),
-(20, 20, 20, 'Oscar', 'Vargas', 400, '2020-12-16', '923404127','ovargas@empresa.com');
-
-INSERT 0 20
 
 INSERT INTO Cliente (id_cliente, nombres, apellidos, sexo, numero_telefonico, correo_principal, correo_respaldo, dni_ruc, tipo) VALUES
 (1, 'Juan', 'Perez', 'M', '987654321', 'jperez@cor.com', 'jp@res.com', 12345678, 'N'),
@@ -160,7 +91,7 @@ INSERT INTO Cliente (id_cliente, nombres, apellidos, sexo, numero_telefonico, co
 (19, 'Sandra', 'Morales', 'F', '987654339', 'smorales@cor.com', 'sm@res.com', 12345698, 'N'),
 (20, 'Fer', 'Ruiz', 'M', '987654340', 'fruiz@cor.com', 'fr@res.com', 23456798, 'N');
 
-INSERT 0 20
+
 
   
 INSERT INTO Prestamo (id_prestamo, id_cliente, monto, tasa) VALUES
@@ -185,8 +116,6 @@ INSERT INTO Prestamo (id_prestamo, id_cliente, monto, tasa) VALUES
 (19, 119, 18000.00, 5.3),
 (20, 120, 22000.00, 3.9);
 
-INSERT 0 20
-
   
 INSERT INTO TarjetaCredito (id_tarjeta_credito, id_cliente, fecha_vencimiento, numero_tarjeta, clave, pago_minimo, limite_credito, fecha_cierre) VALUES
 (1, 101, '2025-12-31', 1234567890123456, 1234, 150.00, 5000.00, '2024-10-25'),
@@ -209,39 +138,6 @@ INSERT INTO TarjetaCredito (id_tarjeta_credito, id_cliente, fecha_vencimiento, n
 (18, 118, '2027-07-05', 9901234567890123, 9901, 225.00, 10500.00, '2024-11-11'),
 (19, 119, '2028-06-30', 1112345678901234, 1112, 175.00, 9500.00, '2024-11-12'),
 (20, 120, '2029-05-15', 2223456789012345, 2223, 200.00, 10000.00, '2024-11-13');
-
---ERROR:  entero fuera de rango
-  
-ALTER TABLE TarjetaCredito
-  
-ALTER COLUMN numero_tarjeta TYPE VARCHAR(16);
-
-ALTER TABLE
-
-  
-INSERT INTO TarjetaCredito (id_tarjeta_credito, id_cliente, fecha_vencimiento, numero_tarjeta, clave, pago_minimo, limite_credito, fecha_cierre) VALUES
-(1, 101, '2025-12-31', 1234567890123456, 1234, 150.00, 5000.00, '2024-10-25'),
-(2, 102, '2026-11-30', 2345678901234567, 2345, 200.00, 10000.00, '2024-10-26'),
-(3, 103, '2027-10-15', 3456789012345678, 3456, 100.00, 7000.00, '2024-10-27'),
-(4, 104, '2025-09-20', 4567890123456789, 4567, 250.00, 12000.00, '2024-10-28'),
-(5, 105, '2028-08-31', 5678901234567890, 5678, 300.00, 8000.00, '2024-10-29'),
-(6, 106, '2026-07-25', 6789012345678901, 6789, 150.00, 9000.00, '2024-10-30'),
-(7, 107, '2029-06-30', 7890123456789012, 7890, 200.00, 11000.00, '2024-10-31'),
-(8, 108, '2024-05-31', 8901234567890123, 8901, 100.00, 5000.00, '2024-11-01'),
-(9, 109, '2025-04-30', 9012345678901234, 9012, 250.00, 15000.00, '2024-11-02'),
-(10, 110, '2026-03-31', 1123456789012345, 1123, 175.00, 8500.00, '2024-11-03'),
-(11, 111, '2027-02-28', 2234567890123456, 2234, 225.00, 13000.00, '2024-11-04'),
-(12, 112, '2025-01-15', 3345678901234567, 3345, 125.00, 6500.00, '2024-11-05'),
-(13, 113, '2028-12-20', 4456789012345678, 4456, 275.00, 12000.00, '2024-11-06'),
-(14, 114, '2029-11-25', 5567890123456789, 5567, 225.00, 7500.00, '2024-11-07'),
-(15, 115, '2027-10-10', 6678901234567890, 6678, 200.00, 14000.00, '2024-11-08'),
-(16, 116, '2025-09-15', 7789012345678901, 7789, 175.00, 6000.00, '2024-11-09'),
-(17, 117, '2026-08-20', 8890123456789012, 8890, 150.00, 5500.00, '2024-11-10'),
-(18, 118, '2027-07-05', 9901234567890123, 9901, 225.00, 10500.00, '2024-11-11'),
-(19, 119, '2028-06-30', 1112345678901234, 1112, 175.00, 9500.00, '2024-11-12'),
-(20, 120, '2029-05-15', 2223456789012345, 2223, 200.00, 10000.00, '2024-11-13');
-
-INSERT 0 20
 
   
 INSERT INTO CuentaBancaria (id_cuenta, id_cliente, balance_cuenta) VALUES
@@ -266,8 +162,6 @@ INSERT INTO CuentaBancaria (id_cuenta, id_cliente, balance_cuenta) VALUES
 (19, 319, 9700.00),
 (20, 320, 5000.00);
 
-INSERT 0 20
-
   
 INSERT INTO TarjetaDebito (id_tarjeta_debito, id_cliente, id_cuenta, fecha_vencimiento, numero_tarjeta, clave, tipo_suscripcion) VALUES
 (1, 301, 1, '2025-12-31', 1234567890123456, '1234', 'A'),
@@ -290,9 +184,6 @@ INSERT INTO TarjetaDebito (id_tarjeta_debito, id_cliente, id_cuenta, fecha_venci
 (18, 318, 18, '2027-07-05', 9901234567890123, '9901', 'C'),
 (19, 319, 19, '2028-06-30', 1112345678901234, '1112', 'A'),
 (20, 320, 20, '2029-05-15', 2223456789012345, '2223', 'B');
-
-INSERT 0 20
-
   
 INSERT INTO Inversion (id_inversion, id_cuenta, monto, interes) VALUES
 (1, 401, 5000.00, 3.5),
@@ -315,7 +206,6 @@ INSERT INTO Inversion (id_inversion, id_cuenta, monto, interes) VALUES
 (18, 418, 1000.00, 3.5),
 (19, 419, 10500.00, 4.1),
 (20, 420, 17000.00, 4.7);
-INSERT 0 20
 
   
 INSERT INTO Transaccion (id_transaccion, id_cuenta, monto, fecha) VALUES
@@ -339,9 +229,6 @@ INSERT INTO Transaccion (id_transaccion, id_cuenta, monto, fecha) VALUES
 (18, 418, 300.00, '2023-10-18 17:40:45'),
 (19, 419, 250.50, '2023-10-19 18:50:55'),
 (20, 420, 700.00, '2023-10-20 09:00:15');
-
-INSERT 0 20
-
   
 INSERT INTO Transferencia (id_transferencia, id_cuenta_src, id_cuenta_dst, monto, fecha) VALUES
 (1, 401, 402, 250.75, '2023-10-01 10:15:30'),
