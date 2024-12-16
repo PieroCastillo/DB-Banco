@@ -262,4 +262,4 @@ INSERT INTO Sucursal (id_sucursal, id_distrito, nombre_sucursal, direccion) VALU
 (7, 7, 'Tacna', '2023-10-07 16:45:30'),
 (8, 8, 'Ucayali', '2023-10-08 17:55:10'),
 (9, 9, 'Arequipa', '2023-10-09 18:05:20'),
-(10, 10, 'Ica', '2023-10-10 09:10:05'),
+(10, 10, 'Ica', '2023-10-10 09:10:05');
