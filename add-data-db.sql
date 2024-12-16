@@ -253,7 +253,7 @@ INSERT INTO Transferencia (id_transferencia, id_cuenta_src, id_cuenta_dst, monto
 (20, 20, 1, 700.00, '2023-10-20 09:00:15');
 
 INSERT INTO Sucursal (id_sucursal, id_distrito, nombre_sucursal, direccion) VALUES
-(1, 1, 'SJL', '2023-10-01 10:15:30'),
+(1, 1, 'SJL', 'Av. Las Lomas 123'),
 (2, 2, 'Jauja', '2023-10-02 11:30:00'),
 (3, 3, 'Chachapoyas', '2023-10-03 12:45:15'),
 (4, 4, 'Huancavelica', '2023-10-04 13:00:00'),
@@ -298,7 +298,17 @@ INSERT INTO SucursalServicio (id_sucursal, id_servicio) VALUES
 (7, 7),
 (8, 8),
 (9, 9),
-(10, 10);
+(10, 10),
+(1, 2),
+(2, 10),
+(3, 5),
+(4, 8),
+(5, 4),
+(6, 9),
+(7, 1),
+(8, 3),
+(9, 6),
+(10, 7);
 
 INSERT INTO Servicio (id_servicio,servicio_ofrecido) VALUES
 (1, 'Apertura de cuentas bancarias'),
@@ -312,3 +322,38 @@ INSERT INTO Servicio (id_servicio,servicio_ofrecido) VALUES
 (9, 'Inversiones y fondos de inversión'),
 (10, 'Seguro de vida y otros productos de seguros');
 
+INSERT INTO SeguroCliente (id_seguro, id_cliente) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+INSERT INTO SeguroTipo (id_tipo, nombre_tipo) VALUES
+(1, 'Seguro de vida'),
+(2, 'Seguro de salud'),
+(3, 'Seguro de auto'),
+(4, 'Seguro de hogar'),
+(5, 'Seguro de viaje'),
+(6, 'Seguro de accidentes personales'),
+(7, 'Seguro de incapacidad temporal'),
+(8, 'Seguro de crédito'),
+(9, 'Seguro de protección de pagos'),
+(10, 'Seguro de protección de tarjetas');
+
+INSERT INTO Seguro (id_seguro, id_tipo, fecha_inicio, fecha_vencimiento, monto_poliza) VALUES
+(1, 1, '2024-10-01 10:15:30', '2029-10-01 10:15:30', 1230),
+(2, 2, '2024-10-02 11:30:00', '2029-10-01 10:15:30', 1340),
+(3, 3, '2024-10-03 12:45:15', '2029-10-01 10:15:30', 2130),
+(4, 4, '2024-10-04 13:00:00', '2029-10-01 10:15:30', 8790),
+(5, 5, '2024-10-05 14:20:25', '2029-10-01 10:15:30', 5670),
+(6, 6, '2024-10-06 15:30:45', '2029-10-01 10:15:30', 1980),
+(7, 7, '2024-10-07 16:45:30', '2029-10-01 10:15:30', 1234),
+(8, 8, '2024-10-08 17:55:10', '2029-10-01 10:15:30', 1320),
+(9, 9, '2024-10-09 18:05:20', '2029-10-01 10:15:30', 5460),
+(10, 10, '2024-10-10 09:10:05', '2029-10-01 10:15:30',2433);
