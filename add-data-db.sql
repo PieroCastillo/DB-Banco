@@ -263,3 +263,52 @@ INSERT INTO Sucursal (id_sucursal, id_distrito, nombre_sucursal, direccion) VALU
 (8, 8, 'Ucayali', '2023-10-08 17:55:10'),
 (9, 9, 'Arequipa', '2023-10-09 18:05:20'),
 (10, 10, 'Ica', '2023-10-10 09:10:05');
+
+INSERT INTO Distrito (id_distrito, id_region, nombre_distrito) VALUES
+(1, 1, 'SJL'),
+(2, 2, 'Jauja'),
+(3, 3, 'Chachapoyas'),
+(4, 4, 'Huancavelica'),
+(5, 5, 'Ancash'),
+(6, 6, 'Tumbes'),
+(7, 7, 'Tacna'),
+(8, 8, 'Ucayali'),
+(9, 9, 'Arequipa'),
+(10, 10, 'Ica');
+
+INSERT INTO Region (id_region, nombre_region) VALUES
+(1,'Lima'),
+(2,'Junin'),
+(3,'Amazonas'),
+(4,'Huancavelica'),
+(5,'Ancash'),
+(6,'Tumbes'),
+(7,'Tacna'),
+(8,'Ucayali'),
+(9,'Arequipa'),
+(10,'Ica');
+
+INSERT INTO SucursalServicio (id_sucursal, id_servicio) VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6),
+(7, 7),
+(8, 8),
+(9, 9),
+(10, 10);
+
+INSERT INTO Servicio (id_servicio,servicio_ofrecido) VALUES
+(1, 'Apertura de cuentas bancarias'),
+(2, 'Asesoramiento financiero'),
+(3, 'Préstamos personales y créditos'),
+(4, 'Transferencias de dinero'),
+(5, 'Depósitos y retiros de efectivo'),
+(6, 'Emisión de tarjetas de débito y crédito'),
+(7, 'Cambio de divisas'),
+(8, 'Gestión de pagos de servicios'),
+(9, 'Inversiones y fondos de inversión'),
+(10, 'Seguro de vida y otros productos de seguros');
+
