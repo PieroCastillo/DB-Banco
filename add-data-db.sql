@@ -254,15 +254,15 @@ INSERT INTO Transferencia (id_transferencia, id_cuenta_src, id_cuenta_dst, monto
 
 INSERT INTO Sucursal (id_sucursal, id_distrito, nombre_sucursal, direccion) VALUES
 (1, 1, 'SJL', 'Av. Las Lomas 123'),
-(2, 2, 'Jauja', '2023-10-02 11:30:00'),
-(3, 3, 'Chachapoyas', '2023-10-03 12:45:15'),
-(4, 4, 'Huancavelica', '2023-10-04 13:00:00'),
-(5, 5, 'Ancash', '2023-10-05 14:20:25'),
-(6, 6, 'Tumbes', '2023-10-06 15:30:45'),
-(7, 7, 'Tacna', '2023-10-07 16:45:30'),
-(8, 8, 'Ucayali', '2023-10-08 17:55:10'),
-(9, 9, 'Arequipa', '2023-10-09 18:05:20'),
-(10, 10, 'Ica', '2023-10-10 09:10:05');
+(2, 2, 'Jauja', 'Jr. Ayacucho 856'),
+(3, 3, 'Chachapoyas', 'Jr. Ortiz Arriet'),
+(4, 4, 'Huancavelica', 'Av. Manchego Muñoz N°299'),
+(5, 5, 'Ancash', 'Pablo Patron 257'),
+(6, 6, 'Tumbes', 'Jr. Bolognesi N°194'),
+(7, 7, 'Tacna', 'Calle Inclán N° 404 Tacna'),
+(8, 8, 'Ucayali', 'Jr. Mariscal Castilla'),
+(9, 9, 'Arequipa', 'Calle el Filtro 501'),
+(10, 10, 'Ica', 'Av. Municipalidad 182');
 
 INSERT INTO Distrito (id_distrito, id_region, nombre_distrito) VALUES
 (1, 1, 'SJL'),
