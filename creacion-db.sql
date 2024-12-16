@@ -54,6 +54,7 @@ create table Area(
 create table Empleado(
     id_empleado int not null primary key,
     id_cargo int not null,
+    id_sucursal int not null,
     id_area int not null,
     nombres varchar(30),
     apellidos varchar(30),
